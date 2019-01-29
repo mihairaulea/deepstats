@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>DeepStats</title>
+  
+  
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+      <link rel="stylesheet" href="css/style.css">
+
+  <script>
+      
+      function drawCharts() {
+          drawOverviewPie();
+      }
+      
+      function drawOverviewPie() {
+          var ctx = document.getElementById("overviewChart").getContext('2d');
+          data = {
+            datasets: [{
+            data: [75, 10, 10],
+                 backgroundColor: [
+                    "#ff355c",
+                    "#ff8621",
+                    "#ffba2d" 
+            ]
+        }],
+         
+
+            labels: [
+                'Neo4j',
+                'Akka',
+                'Spring Framework'
+            ]
+          };
+      
+           var myChart = new Chart(ctx, {
+              type: 'doughnut',
+              data: data
+            });
+      }
+      
+      
+   </script>
+</head>
+
+<body onload="drawCharts()">
+
+  <h1><span class="blue"></span>Deep<span class="blue"></span> <span class="yellow">Stats</span></h1>
+<h2 style="color:white">What frameworks/OS projects did you actually use, and how much of it? <br>How do you rank amongst other users of the tech?</h2>
+
+    
+<iframe src="../search.html" height="100" width="100%" frameBorder="0"></iframe> 
+    <div style="background: white">
+    <h1>Overview for<br>
+            <a href="https://www.linkedin.com/in/mihai-raulea" target="_blank" style="text-decoration:none; color:black">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="42" width="42" style="background-color:rgba(255,0,0,0.5)">
+            mraulea</a></h1>
+                </div>
+            
+    <br><br><br><br><br>
+<table class="container">
+    
+    <thead>
+        <h1>Top 3 OS projects used:</h1><br>
+    <canvas id="overviewChart" width=770px height=300px style="display: block; width: 770px; height: 385px;"></canvas>
+    </thead>
+	<thead>
+		<tr>
+			<th><h1>Tech</h1></th>
+			<th><h1>Versions</h1></th>
+			<th><h1>Classes used</h1></th>
+			<th><h1>Methods used</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td align="middle"><img src="https://go.neo4j.com/rs/710-RRC-335/images/neo4j_logo_globe.png" height="42" width="42" align="middle">Neo4j</td>
+            <td>
+                2.1.2<br>
+                3.1.4
+    
+            </td>
+			<td>12 classes out of 145 <br>
+                <b style="color:green">Top 25%</b> of <a href="#">devs using Neo4j</a>
+            </td>
+			<td>48 methods out of 870</td>
+		</tr>
+		<tr>
+			<td align="middle"><img src="https://seeklogo.com/images/A/akka-logo-24316F492F-seeklogo.com.png" height="42" width="42" align="middle">Akka</td>
+            <td>
+                2.1.0
+    
+            </td>
+			<td>9 classes out of 345</td>
+			<td>33 methods out of 1870</td>
+		</tr>
+		<tr>
+			<td align="middle"><img src="https://pluralsight2.imgix.net/paths/images/corespring-f9a00f4516.png" height="42" width="42" align="middle">Spring</td>
+            <td>
+                5.1.4.RELEASE
+    
+            </td>
+			<td>40 classes out of 1145</td>
+			<td>138 methods out of 8870</td>
+		</tr>
+	</tbody>
+</table>
+    
+    <div style="background: white">
+    <h1><img src="https://go.neo4j.com/rs/710-RRC-335/images/neo4j_logo_globe.png" height="42" width="42" >Neo4j</h1><br>
+                </div>
+    
+  
+<table class="container">
+    
+    <thead>
+        <h1>Usage deep dive</h1><br>
+    </thead>
+	<thead>
+		<tr>
+			<th><h1>Class name</h1></th>
+			<th><h1>Method name</h1></th>
+			<th><h1>Times used</h1></th>
+			<th><h1>Percentage out of total usage</h1></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+            <td align="middle"><a href="https://neo4j.com/docs/java-reference/current/javadocs/org/neo4j/graphdb/Node.html" target="_blank" style="text-decoration:none; color:white"><b>org.neo4j.graphdb.Node<br>(click for docs)</b></a></td>
+            <td>
+            getLabels()    
+            </td>
+            <td>
+            34
+            </td>
+			<td>
+                <b style="color:green">2.5%</b> of all written code
+            </td>
+		</tr>
+		<tr>
+            <td align="middle">...</td>
+            <td>
+            ...
+            </td>
+            <td>
+            ...
+            </td>
+			<td>
+                ...
+            </td>
+		</tr>
+    </tbody>
+    </table>
+
+    <h1>... find out more!</h1>
+    <h1><a href="https://www.linkedin.com/in/mihai-raulea" target="_blank" style="text-decoration: none">Talk to me!</a></h1>
+</body>
+
+</html>
